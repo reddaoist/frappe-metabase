@@ -1,15 +1,12 @@
-/* eslint require-jsdoc: 0 */
-
-frappe.pages['metabase-dashboard'].on_page_load = (wrapper) => {
-	// init page
+frappe.pages['metabase-embedded'].on_page_load = function(wrapper) {
 	const page = frappe.ui.make_app_page({
 		'parent': wrapper,
-		'title': 'Dashboard',
+		'title': 'Metabase Dashboard',
 		'single_column': true,
 	});
 
 	new MetabaseDashboard(page, wrapper);
-};
+}
 
 class MetabaseDashboard {
 	constructor(page, wrapper) {
